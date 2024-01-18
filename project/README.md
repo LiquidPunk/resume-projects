@@ -1,4 +1,4 @@
-# CHECK RESUME-PROJECTS TO SEE PYTHON NOTEBOOKS
+# CHECK FILES IN resume-projects TO SEE PYTHON NOTEBOOKS!
 
 # Used Car Price Prediction Through Machine Learning
 
