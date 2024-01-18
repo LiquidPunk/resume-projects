@@ -1,7 +1,5 @@
 # Used Car Price Prediction Through Machine Learning
 
-#### Video Demo:  <https://youtu.be/leDrIC6BO-c>
-
 ## Prerequisites
 
 Make sure you have Python installed on your system.
