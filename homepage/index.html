@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6fd2d9fe96.js" crossorigin="anonymous"></script>
+    <script>
+        let prevScrollPos = window.pageYOffset;
+
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollPos > currentScrollPos) {
+                document.querySelector("header").style.top = "0"; // Scroll up, show the header
+            } else {
+                document.querySelector("header").style.top = "-100px"; // Scroll down, hide the header
+            }
+            prevScrollPos = currentScrollPos;
+        };
+    </script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Webpage</title>
+</head>
+<body>
+<!-- Start Nav Bar Area -->
+    <header>
+        <div class="container">
+            <h1 class="logo">
+                <div id="logo">
+                    <a href="/">LiquidPunk</a>
+                </div>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- End Nav Bar Area -->
+
+<main style="margin-top: 100px;">
+
+<!-- Start about section-->
+<section id="about">
+    <div class="container mt-4 pt-4">
+        <h1 class="text-center">About Me</h1>
+        <div class="row mt-4">
+            <div class="col-lg-4">
+                <img class="imageAboutPage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfooBexkESIF_57OPqtuiv1qix-efMvhTXXzmPb__HkwEYJxERbYXpZghDUb_-3jr32Yc&usqp=CAU" alt="cs50_cat">
+            </div>
+
+            <div class="col-lg-8">
+                <p class="indented-paragraph">
+                    Hi I'm LiquidPunk (not my real name), and the picture on the left is the cs50 cat. Didn't actually realize that it was from the "can i has cheezburger" meme, but it did look sort of familiar I guess? Im not too sure what to put here cause its quite odd to type stuff about myself so this is mostly just filler. The second paragraph element will probably be just as bad, sorry in advanced.
+                </p>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <ul>
+                            <li>Name: Liquid Punk</li>
+                            <li>Age: ??</li>
+                            <li>Gender: Male</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <p class="indented-paragraph">
+                        This is the 2nd paragraph element mentioned earlier. I have decided to talk about how and why I chose to take CS50. So, I heard of this course probably 6-7 years ago, but only took it recently when a friend told me that she was taking it, and I decided, why not! As to why I'm taking it, it is because I would like to get into data analysis and maybe/hopefully data science in the future, and I figured that this course would be the best foundation for my data stuff/computer science journey.
+                        Honestly, I really do think that the course is well-structured with how it chooses which topics to teach and when to teach them. I could sing more praises, but now this second part of the "About Me" section is really unbalanced. Anyway, below will be an accordion-style component of some of my interests and links to various things related to said interests. Thank you!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End about section-->
+
+    <div class="container">
+        <hr>
+    </div>
+
+<!-- Start interests section-->
+<section id="interests">
+    <div class="container mt-3">
+        <h1 class="text-center">Here are some of my Interests as of late!</h1>
+
+        <div class="accordion" id="interestsAccordion">
+
+            <!-- Interest Item 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="item1Header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1Content" aria-expanded="true" aria-controls="item1Content">
+                        Data Analysis
+                    </button>
+                </h2>
+                <div id="item1Content" class="accordion-collapse collapse show" aria-labelledby="item1Header" data-bs-parent="#interestsAccordion">
+                    <div class="accordion-body">
+                        <img class="card-img-top" src="https://ritza.co/articles/assets/matplotlib-vs-article/matplot-vs-seaborn.png" alt="Card image">
+                        <p>I'm really into data analysis and working with data in general. I enjoy the for numbers, patterns, the absoluteness of data (though it can also manipulated easily), and using the information gathered from it to make smart choices (hopefully). All in all, I think it's pretty cool. The link below leads to kaggle, a popular site for data scientists and for finding datasets to work on.</p>
+                        <div class="text-center">
+                            <a href="https://www.kaggle.com/" class="btn btn-success">https://www.kaggle.com/</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interest Item 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="item2Header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2Content" aria-expanded="false" aria-controls="item2Content">
+                        Music and Audio
+                    </button>
+                </h2>
+                <div id="item2Content" class="accordion-collapse collapse" aria-labelledby="item2Header" data-bs-parent="#interestsAccordion">
+                    <div class="accordion-body">
+                        <img class="card-img-top" src="https://i.redd.it/psazq8iyt9341.png" alt="Card image">
+                        <p>Always been a big fan of music and later on audio equipment. Joined the school choir and played a couple instruments like the guitar, violin, and piano. Not much to talk about why I like music as it probably the same as the next person, but as for music taste I prefer more progressive music. As for audio equipment, I enjoy balanced sounding headphones. Though it is nice to listen to music with the other sound signatures from time to time. Below is a link to a really good spotify playlist for testing out headphones.</p>
+                        <div class="text-center">
+                            <a href="https://open.spotify.com/playlist/37i9dQZF1DWZtZ8vUCzche" class="btn btn-success">https://open.spotify.com/playlist/37i9dQZF1DWZtZ8vUCzche</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interest Item 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="item3Header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3Content" aria-expanded="false" aria-controls="item3Content">
+                        Fashion
+                    </button>
+                </h2>
+                <div id="item3Content" class="accordion-collapse collapse" aria-labelledby="item3Header" data-bs-parent="#interestsAccordion">
+                    <div class="accordion-body">
+                        <img class="card-img-top" src="https://i.pinimg.com/originals/4c/d0/37/4cd0378937aee9e01f7c7ebef69d779f.jpg" alt="Card image">
+                        <p>Fashion, sadly enough, takes a big part of my life even though I dress mostly in white shirts and pants lying around. I really do think dressing up is a great way of self expression and trying out different styles and materials is really fun and possibly helpful. Personally I like it best when people dress in opposition to trends, which further the scope of fashion. Below is a link to the wikipedia page one of my favorite designers, Martin Margiela.</p>
+                        <div class="text-center">
+                            <a href="https://en.wikipedia.org/wiki/Martin_Margiela" class="btn btn-success">https://en.wikipedia.org/wiki/Martin_Margiela</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interest Item 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="item4Header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item4Content" aria-expanded="false" aria-controls="item4Content">
+                        Video Games
+                    </button>
+                </h2>
+                <div id="item4Content" class="accordion-collapse collapse" aria-labelledby="item4Header" data-bs-parent="#interestsAccordion">
+                    <div class="accordion-body">
+                        <img class="card-img-top" src="https://i.ytimg.com/vi/6zsp_PusQJY/maxresdefault.jpg" alt="Card image">
+                        <p>Like most from people my generation and beyond, I like video games. It's great for passing time, boosting your ego or just hanging out with friends. Gaming offers seemingly endless excitement, possiblities and a break from the everyday grind. Below is a link to a youtube video of a game with practically endless possibilities Super Smash Brothers Melee. And as a great man once said "there is so much more melee to be played".</p>
+                        <div class="text-center">
+                            <a href="https://youtu.be/cqM92Lf0IJc?t=2368" class="btn btn-success">https://youtu.be/cqM92Lf0IJc?t=2368</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interest Item 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="item5Header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item5Content" aria-expanded="false" aria-controls="item5Content">
+                        F1 Racing
+                    </button>
+                </h2>
+                <div id="item5Content" class="accordion-collapse collapse" aria-labelledby="item5Header" data-bs-parent="#interestsAccordion">
+                    <div class="accordion-body">
+                        <img class="card-img-top" src="https://wallpapercave.com/wp/wp11280431.jpg" alt="Card image">
+                        <p>Just got into Formula 1 racing recently from a friend, and it pretty much got rid of most of my driving anxieties. The sheer speed, precision, and roars of the engines. There are other racing federations but none compare to the scale of how televised and the marketing that Formula 1 does. Below is a youtube music link to the latest theme song of the current best driver in the circuit, TU-TU-DU-DU MAX VERSTAPPEN!</p>
+                        <div class="text-center">
+                            <a href="https://music.youtube.com/watch?v=dDJvoe2NjpI" class="btn btn-success">https://music.youtube.com/watch?v=dDJvoe2NjpI</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- End interests section-->
+
+
+ <!-- Start footer section-->
+
+<footer id="footer">
+    <div class="container-fluid">
+        <div class="social-icons mt-4">
+            <a href="https://cs50.harvard.edu/x/2023/" target="_blank"><i class="fa-solid fa-school-flag"></i></a>
+            <a href="https://cs50.harvard.edu/x/2023/psets/8/homepage/" target="_blank"><i class="fa-solid fa-house"></i></a>
+        </div>
+    </div>
+</footer>
+
+ <!-- End footer section-->
+
+</body>
+</html>

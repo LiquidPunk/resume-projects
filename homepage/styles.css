@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	background: #fff;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* Style for the hidden navigation bar */
+header {
+  position: fixed;
+  top: -100px; 
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #A41034, #000000);
+  transition: top 0.3s;
+  z-index: 1000;
+  top: 0;
+  transition: top 0.3s;
+}
+
+/* Style for the main content to create space at the top when the header is fixed */
+main {
+  margin-top: 100px; /* Should be the same height as the header */
+}
+
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+#logo a {
+  color: #ffffffff;
+  text-decoration: none; /* Remove the underline */
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+/* about nav bar css */
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/* about section image css */
+.imageAboutPage {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.indented-paragraph {
+  text-indent: 50px;
+}
+
+/* Interest image css */
+.card-img-top{
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* social media icons styling */
+.social-icons {
+  font-size: 36px;
+  cursor: pointer;
+}
+. {
+  color: #008000;
+}
+.fab {
+  color: #000000;
+}
+/* footer styling */
+#footer {
+  background: linear-gradient(to bottom, #A41034, #000000);
+  text-align: center;
+}
