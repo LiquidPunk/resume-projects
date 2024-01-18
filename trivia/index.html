@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function () {
+
+                // Multiple Choice: handles click event for correct button
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function ()
+                {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#answer1').innerHTML = 'Correct!';
+                });
+
+                // selects all incorrect buttons
+                let incorrect = document.querySelectorAll('.incorrect');
+
+                // sets colors back to nothing
+                function resetIncorrectButton(button)
+                {
+                    button.style.backgroundColor = '';
+                }
+
+                // incorrect button function with timer and reset
+                function incorrectButton(button)
+                {
+                    button.style.backgroundColor = 'red';
+                    document.querySelector('#answer1').innerHTML = 'Incorrect = (';
+                    setTimeout(function ()
+                    {
+                        resetIncorrectButton(button);
+                        document.querySelector('#answer1').innerHTML = '';
+                    }, 1000);
+                }
+
+                // handles click event for incorrect button
+                for (let i = 0; i < incorrect.length; i++)
+                {
+                    incorrect[i].addEventListener('click', function ()
+                    {
+                        incorrectButton(incorrect[i]);
+                    });
+                }
+                // Free response check: similar to the multiple choice
+                document.querySelector('#check').addEventListener('click', function(event)
+                {
+                    event.preventDefault() // Prevent default form submission behavior
+                    let input = document.querySelector('input');
+                    if (input.value.toLowerCase() == 'python')
+                    {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#answer2').innerHTML = 'Correct!';
+                    }
+                    else
+                    {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#answer2').innerHTML = 'Incorrect =(';
+                    }
+                })
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>
+                    What Problem Set/Lab did LiquidPunk find most interesting?
+                </h3>
+                <button class = "incorrect" type = "text">fiftyville</button>
+                <button class = "correct" type = "text">filter</button>
+                <button class = "incorrect" type = "text">inheritance</button>
+                <button class = "incorrect" type = "text">plurality</button>
+                <button class = "incorrect" type = "text">dictionary</button>
+
+                <p id = "answer1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    What is LiquidPunk's favorite Programming language?
+                </h3>
+                <form>
+                    <input type = "text" placeholder = "Programming language">
+                    <button id = "check"> Check Answer </button>
+
+                    <p id = "answer2"></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/sell" method="post" class="bg-light p-4 rounded">
+                <h1 class="display-4 mb-4">Sell</h1>
+                <div class="form-group">
+                    <label for="symbol">Select a Stock</label>
+                    <select class="form-select" id="symbol" name="symbol">
+                        <option value="" selected disabled>Select a stock</option>
+                        {% for stock in stocks %}
+                            <option value="{{ stock.symbol }}">{{ stock.name }} ({{ stock.symbol }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="shares" class="form-label">Shares</label>
+                    <input autocomplete="off" class="form-control" min="0" name="shares" placeholder="Enter the number of shares" type="number">
+                </div>
+                <button class="btn btn-primary" type="submit">Sell</button>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

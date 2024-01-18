@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+<main class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/buy" method="post" class="bg-light p-4 rounded">
+                <h1 class="display-4 mb-4">Buy</h1>
+                <div class="mb-3">
+                    <label for="symbol" class="form-label">Symbol</label>
+                    <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="Enter symbol" type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="shares" class="form-label">Shares</label>
+                    <input autocomplete="off" class="form-control" min="1" name="shares" placeholder="Enter the number of shares" type="number">
+                </div>
+                <button class="btn btn-primary" type="submit">Buy</button>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}
